@@ -1,30 +1,30 @@
 /* ================================================
-   NEVERMISSALEAD — Scripts
+   NEVERMISSALEAD — Scripts v2
    ================================================ */
 
-// ---- Scroll Animations ----
+// ---- Scroll Animations (Intersection Observer) ----
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.add('is-visible');
         }
     });
-}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+}, {
+    threshold: 0.08,
+    rootMargin: '0px 0px -50px 0px'
+});
 
 document.querySelectorAll('[data-animate]').forEach(el => observer.observe(el));
 
-// ---- Navbar Scroll Effect ----
+// ---- Navbar: Solid on Scroll ----
 const nav = document.getElementById('nav');
-let lastScroll = 0;
 
 window.addEventListener('scroll', () => {
-    const currentScroll = window.scrollY;
-    if (currentScroll > 60) {
+    if (window.scrollY > 50) {
         nav.classList.add('nav--scrolled');
     } else {
         nav.classList.remove('nav--scrolled');
     }
-    lastScroll = currentScroll;
 }, { passive: true });
 
 // ---- Mobile Nav Toggle ----
@@ -33,53 +33,75 @@ const navLinks = document.getElementById('navLinks');
 
 navToggle.addEventListener('click', () => {
     navLinks.classList.toggle('is-open');
-    navToggle.classList.toggle('is-open');
 });
 
-// Close mobile nav on link click
 navLinks.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
         navLinks.classList.remove('is-open');
-        navToggle.classList.remove('is-open');
     });
 });
+
+// Close menu on outside click
+document.addEventListener('click', (e) => {
+    if (!navLinks.contains(e.target) && !navToggle.contains(e.target)) {
+        navLinks.classList.remove('is-open');
+    }
+});
+
+// ---- Floating Call Button: Show after scrolling past hero ----
+const floatingCall = document.getElementById('floatingCall');
+if (floatingCall) {
+    const heroSection = document.querySelector('.hero');
+    const floatingObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            // Show button when hero is NOT intersecting (scrolled past)
+            if (!entry.isIntersecting && window.innerWidth <= 768) {
+                floatingCall.style.display = 'flex';
+            } else {
+                floatingCall.style.display = 'none';
+            }
+        });
+    }, { threshold: 0 });
+
+    if (heroSection) floatingObserver.observe(heroSection);
+}
 
 // ---- Contact Form ----
 const contactForm = document.getElementById('contactForm');
 
-contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
+if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
 
-    // Gather form data
-    const formData = new FormData(contactForm);
-    const data = Object.fromEntries(formData);
+        const formData = new FormData(contactForm);
+        const data = Object.fromEntries(formData);
 
-    // Log form submission (replace with real endpoint later)
-    console.log('Form submitted:', data);
+        // Facebook Pixel lead event
+        if (typeof fbq !== 'undefined') {
+            fbq('track', 'Lead', {
+                content_name: 'Demo Request',
+                content_category: data.industry
+            });
+        }
 
-    // Facebook Pixel lead event
-    if (typeof fbq !== 'undefined') {
-        fbq('track', 'Lead', {
-            content_name: 'Demo Request',
-            content_category: data.industry
-        });
-    }
-
-    // Show success state
-    contactForm.innerHTML = `
-        <div class="form--success" style="grid-column: 1 / -1;">
-            <div>
-                <div class="form__success-msg">🎉 Demo Request Received!</div>
-                <p class="form__success-sub">We'll reach out within 1 business hour to get you set up.</p>
+        // Show success state
+        contactForm.innerHTML = `
+            <div class="form--success">
+                <div>
+                    <div class="form__success-msg">Demo Request Received!</div>
+                    <p class="form__success-sub">We'll reach out within 1 business hour to get you set up.</p>
+                </div>
             </div>
-        </div>
-    `;
-});
+        `;
+    });
+}
 
 // ---- Smooth scroll for anchor links ----
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
-        const target = document.querySelector(this.getAttribute('href'));
+        const href = this.getAttribute('href');
+        if (href === '#') return;
+        const target = document.querySelector(href);
         if (target) {
             e.preventDefault();
             target.scrollIntoView({ behavior: 'smooth', block: 'start' });

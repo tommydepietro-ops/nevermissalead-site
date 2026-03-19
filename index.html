@@ -7,7 +7,7 @@
     <meta name="description" content="24/7 AI receptionist for plumbers, HVAC techs, electricians & roofers. Never miss another call. Never lose another job.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📞</text></svg>">
 
@@ -49,47 +49,65 @@
     <!-- HERO -->
     <header class="hero">
         <div class="hero__bg-glow"></div>
+        <div class="hero__bg-glow hero__bg-glow--2"></div>
+        <div class="hero__grid-bg"></div>
         <div class="container hero__inner">
-            <div class="hero__badge" data-animate="fade-up">⚡ AI Answering Services for Trades</div>
+            <div class="hero__badge" data-animate="fade-up">
+                <span class="hero__badge-dot"></span>
+                AI Answering for Trades
+            </div>
             <h1 class="hero__title" data-animate="fade-up" data-delay="1">
                 Your Phone Rings.<br>
                 <span class="text-gradient">Amy Answers.</span><br>
                 You Get the Job.
             </h1>
             <p class="hero__sub" data-animate="fade-up" data-delay="2">
-                Missed calls cost tradespeople thousands every month. Amy is your AI receptionist — she picks up 24/7, qualifies every caller, captures their info, and logs the lead. You just show up and close.
+                62% of callers won't leave a voicemail. That's thousands in lost revenue every month. Amy is your AI receptionist — she picks up 24/7, qualifies every caller, and logs the lead automatically. You just show up and close.
             </p>
             <div class="hero__ctas" data-animate="fade-up" data-delay="3">
-                <a href="#contact" class="btn btn--accent btn--lg">Get a Free Demo</a>
+                <a href="#contact" class="btn btn--accent btn--lg">
+                    Get a Free Demo
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
                 <a href="tel:9496231149" class="btn btn--outline btn--lg btn--call">
                     <span class="btn__ring"></span>
-                    📞 Call Amy Now: (949) 623-1149
+                    Call Amy: (949) 623-1149
                 </a>
             </div>
-        </div>
-        <div class="hero__scroll-hint" data-animate="fade-up" data-delay="4">
-            <span>Scroll</span>
-            <div class="hero__scroll-line"></div>
+            <div class="hero__proof" data-animate="fade-up" data-delay="4">
+                <div class="hero__proof-item">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 8.5l4 4 8-9" stroke="#ff5c28" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    No contracts
+                </div>
+                <div class="hero__proof-item">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 8.5l4 4 8-9" stroke="#ff5c28" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    Setup in &lt;2 hours
+                </div>
+                <div class="hero__proof-item">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 8.5l4 4 8-9" stroke="#ff5c28" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    Cancel anytime
+                </div>
+            </div>
         </div>
     </header>
 
     <!-- STATS BAR -->
-    <section class="stats" data-animate="fade-up">
+    <section class="stats">
         <div class="container stats__grid">
-            <div class="stat">
-                <span class="stat__number" data-count="24">24/7</span>
+            <div class="stat" data-animate="fade-up">
+                <span class="stat__number">24/7</span>
                 <span class="stat__label">Always Answering</span>
             </div>
-            <div class="stat">
+            <div class="stat" data-animate="fade-up" data-delay="1">
                 <span class="stat__number">0</span>
                 <span class="stat__label">Missed Calls</span>
             </div>
-            <div class="stat">
-                <span class="stat__number">No</span>
-                <span class="stat__label">Contracts — Cancel Anytime</span>
+            <div class="stat" data-animate="fade-up" data-delay="2">
+                <span class="stat__number">Zero</span>
+                <span class="stat__label">Contracts</span>
             </div>
-            <div class="stat">
-                <span class="stat__number">&lt;2hrs</span>
+            <div class="stat" data-animate="fade-up" data-delay="3">
+                <span class="stat__number">&lt;2hr</span>
                 <span class="stat__label">Setup Time</span>
             </div>
         </div>
@@ -98,25 +116,34 @@
     <!-- PROBLEM -->
     <section class="problem" id="problem">
         <div class="container">
-            <div class="section-label" data-animate="fade-up">The Problem</div>
-            <h2 class="section-title" data-animate="fade-up">
-                Every Missed Call Is a<br><span class="text-gradient">Lost Job</span>
-            </h2>
+            <div class="problem__header">
+                <div class="section-label" data-animate="fade-up">The Problem</div>
+                <h2 class="section-title" data-animate="fade-up">
+                    Every Missed Call Is<br>a <span class="text-gradient">Lost Job</span>
+                </h2>
+                <p class="section-sub" data-animate="fade-up">You're spending money to make the phone ring — then losing jobs because you can't pick up.</p>
+            </div>
             <div class="problem__grid">
                 <div class="problem__card" data-animate="fade-up" data-delay="1">
-                    <div class="problem__icon">📵</div>
-                    <h3>You're on a Job</h3>
+                    <div class="problem__icon-wrap">
+                        <div class="problem__icon">📵</div>
+                    </div>
+                    <h3>You're On a Job Site</h3>
                     <p>You can't answer the phone when you're elbow-deep in a pipe or up on a roof. The call goes to voicemail. The customer hangs up and calls the next guy.</p>
                 </div>
                 <div class="problem__card" data-animate="fade-up" data-delay="2">
-                    <div class="problem__icon">💸</div>
-                    <h3>Revenue Disappears</h3>
-                    <p>85% of callers who reach voicemail won't leave a message. That's not a missed call — it's a missed $500–$5,000 job walking straight to your competitor.</p>
+                    <div class="problem__icon-wrap">
+                        <div class="problem__icon">💸</div>
+                    </div>
+                    <h3>$500 – $3,000 Gone</h3>
+                    <p>62% of callers won't leave a voicemail. That's not a missed call — that's a $500 to $3,000 job walking straight to your competitor down the street.</p>
                 </div>
                 <div class="problem__card" data-animate="fade-up" data-delay="3">
-                    <div class="problem__icon">🔄</div>
-                    <h3>The Cycle Repeats</h3>
-                    <p>You spend money on ads, mailers, and SEO to make the phone ring — then miss the calls those campaigns generate. You're paying for leads you never capture.</p>
+                    <div class="problem__icon-wrap">
+                        <div class="problem__icon">🔄</div>
+                    </div>
+                    <h3>You Pay Twice to Lose</h3>
+                    <p>You spend money on ads, mailers, and SEO to generate calls — then miss the calls those campaigns generate. You're paying for leads you never capture.</p>
                 </div>
             </div>
         </div>
@@ -133,31 +160,42 @@
 
             <div class="steps">
                 <div class="step" data-animate="fade-up" data-delay="1">
-                    <div class="step__num">01</div>
+                    <div class="step__marker">
+                        <div class="step__num">01</div>
+                        <div class="step__line"></div>
+                    </div>
                     <div class="step__content">
-                        <h3>Your Phone Rings</h3>
-                        <p>A homeowner needs an emergency repair, a quote, or wants to schedule service. They call your business number.</p>
+                        <h3>Customer Calls Your Number</h3>
+                        <p>A homeowner needs an emergency repair, a quote, or wants to schedule service. They call your business number — day or night.</p>
                     </div>
                 </div>
                 <div class="step" data-animate="fade-up" data-delay="2">
-                    <div class="step__num">02</div>
+                    <div class="step__marker">
+                        <div class="step__num">02</div>
+                        <div class="step__line"></div>
+                    </div>
                     <div class="step__content">
                         <h3>Amy Picks Up Instantly</h3>
-                        <p>No hold music, no voicemail. Amy answers like a real receptionist — friendly, professional, and trained on your business.</p>
+                        <p>No hold music. No voicemail. Amy answers like a real receptionist — friendly, professional, and trained specifically on your business.</p>
                     </div>
                 </div>
                 <div class="step" data-animate="fade-up" data-delay="3">
-                    <div class="step__num">03</div>
+                    <div class="step__marker">
+                        <div class="step__num">03</div>
+                        <div class="step__line"></div>
+                    </div>
                     <div class="step__content">
-                        <h3>She Qualifies the Lead</h3>
-                        <p>Amy asks the right questions — what service they need, their location, urgency, and contact details. No tire-kickers slip through.</p>
+                        <h3>She Qualifies the Caller</h3>
+                        <p>Amy asks the right questions — what service they need, their location, urgency level, and full contact details. No tire-kickers slip through.</p>
                     </div>
                 </div>
                 <div class="step" data-animate="fade-up" data-delay="4">
-                    <div class="step__num">04</div>
+                    <div class="step__marker">
+                        <div class="step__num">04</div>
+                    </div>
                     <div class="step__content">
-                        <h3>You Get the Lead — Instantly</h3>
-                        <p>Every qualified lead is logged and sent to you via text, email, or your CRM. You call back when you're ready and close the job.</p>
+                        <h3>You Get the Lead Instantly</h3>
+                        <p>Every qualified lead is logged to Google Sheets and sent to you by text and email. Call back when you're ready and close the job.</p>
                     </div>
                 </div>
             </div>
@@ -166,19 +204,26 @@
 
     <!-- LIVE DEMO CTA -->
     <section class="demo-cta" id="demo">
-        <div class="container demo-cta__inner">
-            <div class="demo-cta__content" data-animate="fade-up">
-                <div class="section-label">Hear It Yourself</div>
-                <h2 class="section-title">Don't Take Our Word for It.<br><span class="text-gradient">Call Amy Right Now.</span></h2>
-                <p class="section-sub">Pick up your phone and dial the number below. Amy will answer just like she does for our clients — 24 hours a day, 7 days a week.</p>
-                <a href="tel:9496231149" class="btn btn--call-big">
-                    <span class="btn__ring btn__ring--big"></span>
-                    <span class="btn__call-content">
-                        <span class="btn__call-label">Call Amy Now</span>
-                        <span class="btn__call-number">(949) 623-1149</span>
-                    </span>
-                </a>
-                <p class="demo-cta__note">Free demo call. No credit card. No commitment.</p>
+        <div class="container">
+            <div class="demo-cta__card" data-animate="fade-up">
+                <div class="demo-cta__content">
+                    <div class="section-label">Hear It Yourself</div>
+                    <h2 class="section-title">Don't Take Our Word for It.<br><span class="text-gradient">Call Amy Right Now.</span></h2>
+                    <p class="section-sub">Pick up your phone and dial. Amy will answer just like she does for our clients — 24/7, 365 days a year. Try stumping her.</p>
+                </div>
+                <div class="demo-cta__action">
+                    <a href="tel:9496231149" class="btn btn--call-big">
+                        <div class="btn__call-icon">
+                            <span class="btn__ring btn__ring--big"></span>
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                        <span class="btn__call-content">
+                            <span class="btn__call-label">Call Amy Now</span>
+                            <span class="btn__call-number">(949) 623-1149</span>
+                        </span>
+                    </a>
+                    <p class="demo-cta__note">Free demo call &middot; No credit card &middot; No commitment</p>
+                </div>
             </div>
         </div>
     </section>
@@ -190,52 +235,68 @@
             <h2 class="section-title" data-animate="fade-up">
                 Simple Plans. <span class="text-gradient">Serious ROI.</span>
             </h2>
-            <p class="section-sub" data-animate="fade-up">One missed $500 job pays for months of service. No contracts — cancel anytime.</p>
+            <p class="section-sub" data-animate="fade-up">One missed $500 job pays for months of service. No contracts. Cancel anytime. Setup included.</p>
 
             <div class="pricing__grid">
+                <!-- STARTER -->
                 <div class="pricing__card" data-animate="fade-up" data-delay="1">
-                    <div class="pricing__tier">Starter</div>
-                    <div class="pricing__price">$300<span>/mo</span></div>
+                    <div class="pricing__header">
+                        <div class="pricing__tier">Starter</div>
+                        <div class="pricing__price">$297<span>/mo</span></div>
+                        <p class="pricing__desc">Everything you need to stop missing calls and start capturing leads.</p>
+                    </div>
                     <ul class="pricing__features">
-                        <li>Up to 100 calls/month</li>
-                        <li>AI call answering 24/7</li>
-                        <li>Lead qualification</li>
-                        <li>SMS & email lead alerts</li>
-                        <li>Basic call summary reports</li>
-                        <li>Business hours customization</li>
+                        <li>AI phone receptionist</li>
+                        <li>Local phone number</li>
+                        <li>Lead logging to Google Sheets</li>
+                        <li>Up to 200 calls/month</li>
+                        <li>Email support</li>
                     </ul>
-                    <a href="#contact" class="btn btn--outline btn--full">Get Started</a>
+                    <div class="pricing__footer">
+                        <a href="#contact" class="btn btn--outline btn--full">Get Started</a>
+                        <span class="pricing__note">Setup included &middot; No contracts</span>
+                    </div>
                 </div>
 
+                <!-- PROFESSIONAL -->
                 <div class="pricing__card pricing__card--featured" data-animate="fade-up" data-delay="2">
                     <div class="pricing__popular">Most Popular</div>
-                    <div class="pricing__tier">Professional</div>
-                    <div class="pricing__price">$400<span>/mo</span></div>
+                    <div class="pricing__header">
+                        <div class="pricing__tier">Professional</div>
+                        <div class="pricing__price">$397<span>/mo</span></div>
+                        <p class="pricing__desc">For growing businesses that need custom scripts and after-hours coverage.</p>
+                    </div>
                     <ul class="pricing__features">
-                        <li>Up to 250 calls/month</li>
                         <li>Everything in Starter, plus:</li>
-                        <li>Custom call scripts</li>
-                        <li>CRM integration</li>
-                        <li>Appointment scheduling</li>
-                        <li>Priority support</li>
-                        <li>Detailed analytics dashboard</li>
+                        <li>Custom scripts per scenario</li>
+                        <li>After-hours + weekend coverage</li>
+                        <li>Monthly prompt tuning</li>
+                        <li>Up to 500 calls/month</li>
                     </ul>
-                    <a href="#contact" class="btn btn--accent btn--full">Get Started</a>
+                    <div class="pricing__footer">
+                        <a href="#contact" class="btn btn--accent btn--full">Get Started</a>
+                        <span class="pricing__note">Setup included &middot; No contracts</span>
+                    </div>
                 </div>
 
+                <!-- FULL COVERAGE -->
                 <div class="pricing__card" data-animate="fade-up" data-delay="3">
-                    <div class="pricing__tier">Full Coverage</div>
-                    <div class="pricing__price">$500<span>/mo</span></div>
+                    <div class="pricing__header">
+                        <div class="pricing__tier">Full Coverage</div>
+                        <div class="pricing__price">$497<span>/mo</span></div>
+                        <p class="pricing__desc">The complete package — phone, chat, DMs, and weekly reports. Unlimited calls.</p>
+                    </div>
                     <ul class="pricing__features">
-                        <li>Unlimited calls</li>
                         <li>Everything in Professional, plus:</li>
-                        <li>Multi-location support</li>
-                        <li>Advanced call routing</li>
-                        <li>Bilingual support (EN/ES)</li>
-                        <li>Dedicated account manager</li>
-                        <li>White-glove onboarding</li>
+                        <li>AI website chatbot</li>
+                        <li>Instagram DM automation</li>
+                        <li>Weekly lead reports</li>
+                        <li>Unlimited calls</li>
                     </ul>
-                    <a href="#contact" class="btn btn--outline btn--full">Get Started</a>
+                    <div class="pricing__footer">
+                        <a href="#contact" class="btn btn--outline btn--full">Get Started</a>
+                        <span class="pricing__note">Setup included &middot; No contracts</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -247,13 +308,25 @@
             <div class="contact__inner">
                 <div class="contact__text" data-animate="fade-up">
                     <div class="section-label">Get Started</div>
-                    <h2 class="section-title">Ready to Stop<br><span class="text-gradient">Missing Calls?</span></h2>
+                    <h2 class="section-title">Ready to Stop<br><span class="text-gradient">Losing Jobs?</span></h2>
                     <p class="section-sub">Fill out the form and we'll set up a personalized demo for your business. Most clients are live within 2 hours.</p>
                     <div class="contact__trust">
-                        <div class="contact__trust-item">✓ No contracts</div>
-                        <div class="contact__trust-item">✓ Cancel anytime</div>
-                        <div class="contact__trust-item">✓ Live in under 2 hours</div>
-                        <div class="contact__trust-item">✓ Free demo call included</div>
+                        <div class="contact__trust-item">
+                            <svg width="18" height="18" viewBox="0 0 16 16" fill="none"><path d="M2 8.5l4 4 8-9" stroke="#ff5c28" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            No contracts ever
+                        </div>
+                        <div class="contact__trust-item">
+                            <svg width="18" height="18" viewBox="0 0 16 16" fill="none"><path d="M2 8.5l4 4 8-9" stroke="#ff5c28" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            Cancel anytime
+                        </div>
+                        <div class="contact__trust-item">
+                            <svg width="18" height="18" viewBox="0 0 16 16" fill="none"><path d="M2 8.5l4 4 8-9" stroke="#ff5c28" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            Live in under 2 hours
+                        </div>
+                        <div class="contact__trust-item">
+                            <svg width="18" height="18" viewBox="0 0 16 16" fill="none"><path d="M2 8.5l4 4 8-9" stroke="#ff5c28" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            Free demo call included
+                        </div>
                     </div>
                 </div>
                 <form class="contact__form" data-animate="fade-up" data-delay="1" id="contactForm">
@@ -288,11 +361,20 @@
                         <label for="notes">Anything else? <span class="form__optional">(optional)</span></label>
                         <textarea id="notes" name="notes" rows="3" placeholder="Tell us about your business, call volume, or specific needs..."></textarea>
                     </div>
-                    <button type="submit" class="btn btn--accent btn--full btn--lg">Request My Free Demo</button>
+                    <button type="submit" class="btn btn--accent btn--full btn--lg">
+                        Request My Free Demo
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
                 </form>
             </div>
         </div>
     </section>
+
+    <!-- FLOATING CALL BUTTON (mobile) -->
+    <a href="tel:9496231149" class="floating-call" id="floatingCall" aria-label="Call Amy">
+        <span class="floating-call__pulse"></span>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
 
     <!-- FOOTER -->
     <footer class="footer">
@@ -310,7 +392,7 @@
             </div>
             <div class="footer__links">
                 <h4>Contact</h4>
-                <a href="tel:9496231149">📞 (949) 623-1149</a>
+                <a href="tel:9496231149">(949) 623-1149</a>
                 <a href="#contact">Request a Demo</a>
             </div>
         </div>
