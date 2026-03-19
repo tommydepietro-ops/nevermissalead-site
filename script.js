@@ -88,7 +88,7 @@ if (contactForm) {
         contactForm.innerHTML = `
             <div class="form--success">
                 <div>
-                    <div class="form__success-msg">Demo Request Received!</div>
+                    <div class="form__success-msg">We've Got Your Info!</div>
                     <p class="form__success-sub">We'll reach out within 1 business hour to get you set up.</p>
                 </div>
             </div>
